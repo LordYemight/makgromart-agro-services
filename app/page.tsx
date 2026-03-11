@@ -2,22 +2,22 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
-import { 
-  MessageSquare, 
-  HardHat, 
-  Leaf, 
-  Truck, 
-  Users, 
-  Settings, 
-  CheckCircle, 
-  Star, 
-  Phone, 
-  Mail, 
-  MapPin, 
-  ArrowRight, 
-  Menu, 
-  X, 
-  Instagram, 
+import {
+  MessageSquare,
+  HardHat,
+  Leaf,
+  Truck,
+  Users,
+  Settings,
+  CheckCircle,
+  Star,
+  Phone,
+  Mail,
+  MapPin,
+  ArrowRight,
+  Menu,
+  X,
+  Instagram,
   Send,
   ImageOff
 } from 'lucide-react';
@@ -104,8 +104,8 @@ export default function Website() {
   const products: Product[] = [
     { name: "Premium Fertiliser Blend (50kg)", description: "High-N-P-K blend optimized for Nigerian soil conditions.", price: "₦18,500", image_url: "https://images.unsplash.com/photo-1758608951483-0cbeef303869?auto=format&fit=crop&w=800&q=80" },
     { name: "Mechanized Water Pump (Diesel)", description: "Durable, high-flow pump for irrigation systems.", price: "₦210,000", image_url: "https://images.unsplash.com/photo-1718218722121-5b15e91aef8e?auto=format&fit=crop&w=800&q=80" },
-    { name: "Bag of Quality Maize (100kg)", description: "Clean, dry, and sorted maize grain from our partner farms.", price: "₦45,000", image_url: "https://images.unsplash.com/photo-1758608951483-0cbeef303869?auto=format&fit=crop&w=800&q=80" },
-    { name: "Agro Consulting Package", description: "Personalized consultation on crop rotation, pest control, and yield optimization.", price: "₦75,000", image_url: "https://images.unsplash.com/photo-1718218722121-5b15e91aef8e?auto=format&fit=crop&w=800&q=80" }
+    { name: "Bag of Quality Maize (100kg)", description: "Clean, dry, and sorted maize grain from our partner farms.", price: "₦45,000", image_url: "/maize.png" },
+    { name: "Agro Consulting Package", description: "Personalized consultation on crop rotation, pest control, and yield optimization.", price: "₦75,000", image_url: "/agrocon.png" }
   ];
 
   const features = [
@@ -193,15 +193,15 @@ export default function Website() {
 
       {/* Hero Section */}
       <section id="home" className="min-h-screen relative flex items-center justify-center overflow-hidden">
-        <SafeImage 
-          src={images.hero} 
-          alt="Makgromart Agro" 
-          fill 
-          priority 
-          className="object-cover" 
+        <SafeImage
+          src={images.hero}
+          alt="Makgromart Agro"
+          fill
+          priority
+          className="object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-br from-primary/95 via-primary/80 to-accent/20" />
-        
+
         {/* Animated Orbs */}
         <div className="absolute top-1/4 -left-20 w-80 h-80 bg-accent/20 rounded-full blur-[100px] animate-pulse" />
         <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-primary/40 rounded-full blur-[120px]" />
@@ -340,7 +340,7 @@ export default function Website() {
                     <div className="flex -space-x-4">
                       {[1, 2, 3, 4].map((i) => (
                         <div key={i} className="w-14 h-14 rounded-full border-4 border-zinc-950 bg-zinc-800 flex items-center justify-center overflow-hidden">
-                           <Users size={24} className="text-accent" />
+                          <Users size={24} className="text-accent" />
                         </div>
                       ))}
                     </div>
@@ -368,7 +368,7 @@ export default function Website() {
               <div key={i} className="p-10 rounded-[2.5rem] bg-zinc-950 border border-white/5 relative group hover:border-accent/50 transition-all duration-500">
                 <Star className="absolute top-10 right-10 text-accent/20 group-hover:text-accent transition-colors" size={40} fill="currentColor" />
                 <p className="text-white/80 text-2xl italic leading-relaxed mb-8">
-                   &quot;{t.text}&quot;
+                  &quot;{t.text}&quot;
                 </p>
                 <div className="flex items-center gap-4">
                   <div className="w-14 h-14 rounded-full bg-accent flex items-center justify-center font-black text-black text-xl">
@@ -393,7 +393,7 @@ export default function Website() {
               <div className="p-12 md:p-20">
                 <h2 className="font-heading text-4xl md:text-6xl font-black mb-6 uppercase">Ready to Grow?</h2>
                 <p className="text-white/60 text-xl mb-12">Contact us today to arrange supply for your farm or source the best machinery in Nigeria.</p>
-                
+
                 <div className="space-y-8">
                   <div className="flex items-center gap-6 group">
                     <div className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-black transition-all">
@@ -489,7 +489,7 @@ export default function Website() {
                 </a>
               </div>
             </div>
-            
+
             <div>
               <h4 className="font-bold text-white mb-6 uppercase tracking-widest text-sm">Quick Links</h4>
               <ul className="space-y-4 text-white/40 font-medium">
@@ -513,7 +513,7 @@ export default function Website() {
           <div className="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
             <p className="text-white/20 text-sm">© {new Date().getFullYear()} Makgromart Agro Services. All rights reserved.</p>
             <div className="flex gap-8">
-               <span className="text-white/20 text-xs font-mono uppercase tracking-[0.3em]">Sharp Delivery Guaranteed</span>
+              <span className="text-white/20 text-xs font-mono uppercase tracking-[0.3em]">Sharp Delivery Guaranteed</span>
             </div>
           </div>
         </div>
